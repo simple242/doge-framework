@@ -1,0 +1,198 @@
+$font: 16px;
+$fontTitle: $font * 2;
+$defaultColor: #000;
+$defaultBorder: 1px solid $defaultColor;
+$borderRadius: 3px;
+$fontWeight: 700;
+
+@mixin reset($m: 0, $p: 0) {
+  margin: $m;
+  padding: $p;
+}
+
+@mixin size($w: auto, $h: auto) {
+  width: $w;
+  height: $h;
+}
+
+router-layout {
+  display: block;
+  @include reset;
+  @include size;
+}
+
+router {
+  display: inline-block;
+  @include reset;
+  @include size;
+  cursor: pointer;
+}
+
+doge {
+  display: block;
+  @include reset;
+}
+
+doge-text {
+  display: block;
+  @include reset;
+  color: $defaultColor;
+  font-size: $font;
+}
+
+doge-bold {
+  display: inline;
+  @include reset;
+  font-weight: $fontWeight;
+  color: $defaultColor;
+  font-size: $font;
+  @include size;
+}
+
+doge-italic {
+  display: inline;
+  @include reset;
+  font-style: italic;
+  color: $defaultColor;
+  font-size: $font;
+  @include size;
+}
+
+doge-cross {
+  display: inline;
+  @include reset;
+  text-decoration: line-through;
+  color: $defaultColor;
+  font-size: $font;
+  @include size;
+}
+
+doge-little {
+  display: inline;
+  @include reset;
+  color: $defaultColor;
+  font-size: 13px;
+  @include size;
+}
+
+doge-heading {
+  display: block;
+  @include reset;
+  color: $defaultColor;
+  font-size: $fontTitle;
+  font-weight: $fontWeight;
+}
+
+doge-top, doge-content, doge-bottom, doge-navigation {
+  display: flex;
+  @include reset;
+}
+
+doge-box {
+  display: flex;
+  @include reset;
+}
+
+doge-central {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  @include reset;
+}
+
+doge-list {
+  display: flex;
+  flex-direction: column;
+  @include reset;
+}
+
+/** doge-list-item **/
+doge-item {
+  display: block;
+  @include reset;
+}
+
+doge-link {
+  display: inline;
+  @include reset;
+  @include size;
+
+  & > a {
+    @include reset;
+    font-size: $font;
+    cursor: pointer;
+    text-decoration: none;
+  }
+}
+
+doge-pic {
+  display: inline-block;
+  @include reset;
+  @include size;
+
+  & > img {
+    display: block;
+    @include reset;
+  }
+}
+
+doge-btn {
+  display: inline-block;
+  @include reset;
+
+  & > button {
+    @include reset;
+    background-color: #eee;
+    border: $defaultBorder;
+    color: $defaultColor;
+    min-width: 70px;
+    height: 23px;
+    cursor: pointer;
+    border-radius: $borderRadius;
+    outline: none;
+    font-size: $font;
+
+    &:hover {
+      background-color: #ccc;
+    }
+
+    &:active {
+      background-color: #fff;
+    }
+  }
+}
+
+doge-edit {
+  display: inline-block;
+  @include reset;
+  @include size(170px, 24px);
+
+  & > input {
+    @include size(100%, 100%);
+    @include reset(0, 2px 8px);
+    outline: none;
+    border: $defaultBorder;
+    border-radius: $borderRadius;
+    box-sizing: border-box;
+    font-size: $font;
+    color: $defaultColor;
+    cursor: text;
+  }
+}
+
+doge-field {
+  display: inline-block;
+  @include reset;
+
+  & > textarea {
+    @include reset(0, 4px);
+    box-sizing: border-box;
+    outline: none;
+    border: $defaultBorder;
+    border-radius: $borderRadius;
+    font-size: $font;
+    resize: none;
+    @include size(200px, 60px);
+  }
+}

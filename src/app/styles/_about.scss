@@ -1,0 +1,50 @@
+@import "variables";
+
+.about {
+  display: block;
+
+  &__title {
+    text-align: center;
+    font-size: 25px;
+    margin-top: 50px;
+    font-weight: normal;
+  }
+}
+
+.list {
+  width: 80%;
+  margin: 30px auto 20px;
+
+  &__item {
+    margin-top: -1px;
+    border: 1px solid #e0e0e0;
+    padding: 15px 10px;
+    border-radius: 3px;
+    display: flex;
+    align-items: center;
+    transition: box-shadow .5s;
+
+    &:hover {
+      box-shadow: 0 8px 17px 0 #00000033, 0 6px 20px 0 #00000030;
+    }
+  }
+
+  &__wrapper {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: aqua;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__img {
+    width: 20px;
+    margin-left: 4px;
+  }
+
+  &__text {
+    margin-left: 15px;
+  }
+}

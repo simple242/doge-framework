@@ -1,0 +1,25 @@
+@import "~normalize.css";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: 'Roboto Regular';
+  src: url('doge-core/fonts/Roboto-Regular.ttf');
+}
+
+body {
+  font-family: 'Roboto Regular', Arial, sans-serif;
+  font-size: 18px;
+  color: #000;
+}
+
+ul {
+  list-style-type: none;
+}
+
+@import 'doge-core/styles/doge-tags';
+@import 'app/styles/app';
