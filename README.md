@@ -80,7 +80,7 @@ Render Component in DOM Node:
 ```typescript
 render(ComponentClassName, 'selectorName')
 ```
-Render Component white params:
+Render Component with params:
 ```typescript
 render(ComponentClassName.setParams({params}), 'selectorName')
 ```
